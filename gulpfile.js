@@ -4,6 +4,7 @@ let browserSync = require('browser-sync').create();
 let cleanCSS = require('gulp-clean-css');
 let rename = require('gulp-rename');
 let uglify = require('gulp-uglify');
+let deploy      = require('gulp-gh-pages');
 
 // Compile scss to css
 gulp.task('sass', () => {
@@ -78,6 +79,11 @@ gulp.task('browserSync', () => {
     }
   })
 });
+
+// Push build to gh-pages
+gulp.task('deploy', () => {
+
+})
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() {

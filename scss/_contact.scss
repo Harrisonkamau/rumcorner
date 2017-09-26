@@ -1,0 +1,6 @@
+section#contact {
+  .form-control:focus {
+    border-color: $theme-primary;
+    box-shadow: none;
+  }
+}
